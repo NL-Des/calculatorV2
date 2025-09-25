@@ -6,10 +6,10 @@ import (
 	"strconv"
 )
 
-func Calculs(sample1 []rune, symbol rune, sample2 []rune, symbolOpenBracket rune, symbolEndBracket rune) int {
-	var result int
-	var firstPart int
-	var secondPart int
+func Calculs(sample1 []rune, symbol rune, sample2 []rune, symbolOpenBracket rune, symbolEndBracket rune) float64 {
+	var result float64
+	var firstPart float64
+	var secondPart float64
 	var err error
 
 	if len(sample1) == 0 {
@@ -21,13 +21,13 @@ func Calculs(sample1 []rune, symbol rune, sample2 []rune, symbolOpenBracket rune
 		os.Exit(0)
 	}
 
-	firstPart, err = strconv.Atoi(string(sample1))
+	firstPart, err = strconv.ParseFloat(string(sample1), 64)
 	if err != nil {
 		fmt.Println("firstPart error in func Calculs")
 		os.Exit(0)
 	}
 
-	secondPart, err = strconv.Atoi(string(sample2))
+	secondPart, err = strconv.ParseFloat(string(sample2), 64)
 	if err != nil {
 		fmt.Println("secondPart error in func Calculs")
 		os.Exit(0)

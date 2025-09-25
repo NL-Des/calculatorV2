@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-var result int
+var result float64 // float64 than int, to be able to handle numbers after float.
 var err error
 
 func FirstStep(calcul []rune) {
