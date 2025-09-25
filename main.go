@@ -5,7 +5,7 @@ package main
 
 import (
 	"calculator/gestionerror"
-	engine "calculator/resolvemachine"
+	engine "calculator/resolveengine"
 	"fmt"
 )
 

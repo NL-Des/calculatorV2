@@ -1,8 +1,8 @@
 package engine
 
 import (
-	answer "calculator/resolvemachine/calculanswer"
-	"calculator/resolvemachine/rules"
+	answer "calculator/resolveengine/calculanswer"
+	"calculator/resolveengine/rules"
 	"fmt"
 )
 
