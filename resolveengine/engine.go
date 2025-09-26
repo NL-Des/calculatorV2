@@ -9,7 +9,7 @@ import (
 var result float64 // float64 than int, to be able to handle numbers after float.
 var err error
 
-func FirstStep(calcul []rune) {
+func Solution(calcul []rune) {
 
 	length := len(calcul)
 
@@ -33,10 +33,7 @@ func FirstStep(calcul []rune) {
 
 		// If we meet a number between 0 and 9 and without symbol.
 		// We stock it.
-		sample1 = rules.FirstPart(sample1, caracter, symbol)
-
-		// If between 0 and 9, and already with a symbol in memory.
-		sample2 = rules.SecondPart(sample2, caracter, symbol)
+		sample1, sample2 = rules.NumberParts(sample1, sample2, caracter, symbol)
 
 		// If we meet a symbol and we haven't a symbol in memory.
 		symbol = rules.SymbolGestion(caracter, symbol, i, firstMinusCoord)

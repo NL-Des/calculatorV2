@@ -15,5 +15,5 @@ func main() {
 
 	gestionerror.ImportError()
 	calcul := gestionerror.InputError()
-	engine.FirstStep(calcul)
+	engine.Solution(calcul)
 }
