@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func secondStep(sample1 []rune, sample2 []rune, symbol rune, firstMinus bool, symbolOpenBracket rune, symbolEndBracket rune, end bool, result int) (int, error) {
+func secondStep(sample1 []rune, sample2 []rune, symbol rune, firstMinus bool, openBracket rune, endBracket rune, end bool, result int) (int, error) {
 
 	// Handle Error
 	// Conversion from Runes to Integer of sample1.
@@ -27,30 +27,6 @@ func secondStep(sample1 []rune, sample2 []rune, symbol rune, firstMinus bool, sy
 	} else if len(sample2) == 0 {
 		return 0, errors.New("error in calculs2, nothing in sample2")
 	}
-
-	// Handle brackets
-	/* 	if symbolOpenBracket == '(' {
-	   		oBracket, err := strconv.Atoi(string(symbol))
-	   		if err != nil {
-	   			return 0, errors.New("error in calculs2, on oBracket")
-
-	   		}
-	   	}
-	   	if symbolEndBracket == ')' {
-	   		eBracket, err := strconv.Atoi(string(symbol))
-	   		if err != nil {
-	   			return 0, errors.New("error in calculs2, on eBracket")
-	   		}
-	   	} */
-
-	// Calculs continious.
-	/* 	if result != 0 {
-	   		calculInProcess := true
-	   	} else {
-	   		calculInProcess := false
-	   	} */
-
-	// Calculs
 
 	fmt.Println(symbol)
 

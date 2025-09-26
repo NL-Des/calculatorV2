@@ -1,12 +1,15 @@
 package rules
 
-func BracketGestion(caracter rune, symbolOpenBracket rune, symbolEndBracket rune) (rune, rune) {
+func BracketDetection(i int, caracter rune, openBracket bool, endBracket bool, openBracketID int, endBracketID int) (bool, bool, int, int) {
 	if caracter == '(' {
-		symbolOpenBracket = '('
+		openBracketID = i
+		openBracket = true
 	}
 	if caracter == ')' {
-		symbolEndBracket = ')'
+		endBracketID = i
+		endBracket = true
+
 	}
 
-	return symbolOpenBracket, symbolEndBracket
+	return openBracket, endBracket, openBracketID, endBracketID
 }
